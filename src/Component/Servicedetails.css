@@ -1,0 +1,138 @@
+.area {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 30px 20px;
+}
+
+.area label input {
+  display: none;
+}
+
+.wrong_price {
+  font-size: 15px !important;
+}
+
+.cit-mange {
+  display: grid;
+  grid-template-columns: repeat(2, auto) !important;
+  height: fit-content !important;
+  grid-gap: 0px;
+  cursor: pointer;
+}
+
+.area label input+span {
+  background: #fff;
+  border-radius: 5px;
+  color: #000;
+  padding: 8px 18px;
+  margin-right: 10px;
+  transition: 0.3s;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  background-color: #e0c314;
+  /* box-shadow: 2px 3px 5px rgb(92, 146, 92); */
+  color: #173732;
+  text-shadow: 8px 8px 8px 8px;
+  font-weight: bolder;
+}
+
+.area label input:checked+span {
+  background: green;
+  color: #fff;
+}
+
+.container_proud {
+  height: auto;
+  overflow: auto;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+/* .container_proud::-webkit-scrollbar {
+  display: none;
+} */
+.header_logo {
+  border: 1px solid rgba(0, 0, 0, 0.651);
+  border-radius: 20px;
+}
+
+.valudwidth {
+  width: fit-content;
+}
+
+.data_container {
+  border-right: 3px solid #03b162;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+@media only screen and (max-width: 767px) {
+  .valudwidth {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    font-size: 12px;
+    padding: 10px;
+  }
+
+  .res-header-logo {
+    height: 200px;
+    border-radius: 2px;
+  }
+
+  .container_proud {
+    height: auto;
+  }
+}
+
+.mobile-screen-cart .Offcanvas {
+  display: none !important;
+}
+
+.desktop-screen-cart {
+  display: block !important;
+}
+
+@media only screen and (max-width: 480px) {
+  .mobile-screen-cart .Offcanvas {
+    display: block !important;
+  }
+
+  .desktop-screen-cart {
+    display: none !important;
+  }
+}
+
+@media only screen and (min-width: 200px) and (max-width: 767px) {
+  .mobilescreen-price {
+    width: max-content;
+  }
+}
+
+.do-s {
+  border: 1px solid #03b162;
+  background-color: white;
+  color: black;
+  border-radius: 20px;
+  font-size: 18px;
+  box-shadow: 0px 0px 1px 1px;
+  font-weight: 600;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.dos-active {
+  background-color: #e0c314;
+  color: #03b162;
+
+}
+
+.ul_list {
+  background-color: #f3f5f7;
+  border-radius: 5px;
+}
+
+.dos-list {
+  list-style-type: circle;
+  color: white;
+}
