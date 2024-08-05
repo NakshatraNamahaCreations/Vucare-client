@@ -14,7 +14,7 @@ export default function Footer() {
                   <img
                     className="brd"
                     alt=""
-                    src="..\images\vucarpng.png"
+                    src="..\images\vucarpng (2).png"
                     height={36}
                   />
                 </a>
