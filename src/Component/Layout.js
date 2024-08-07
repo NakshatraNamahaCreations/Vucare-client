@@ -224,7 +224,7 @@ export default function Layout() {
   };
 
   const commercial = [
-    { title: "Hospital", img: "../NewImg/cmrs (1).png" },
+    { title: "Ware House", img: "../NewImg/cmrs (1).png" },
     { title: "College", img: "../NewImg/cmrs (2).png" },
     { title: "Mall", img: "../NewImg/cmrs (3).png" },
     { title: "Industries", img: "../NewImg/cmrs (4).png" },

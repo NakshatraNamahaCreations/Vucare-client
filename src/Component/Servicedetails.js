@@ -212,6 +212,97 @@ function Servicedetails() {
   const handleClosePop = () => {
     setopenPOP(false);
   };
+  console.log(subcategory, "subcategory")
+  const services = [
+    {
+      subcate: "General Deep Cleaning Service",
+      includes: [
+        "Floor Cleaning: Comprehensive floor scrubbing and cleaning using SingleDisc machines to ensure deep dirt removal.",
+        "Dusting and Cobweb Removal: Thorough dusting of all surfaces, including ceilings, walls, and furniture, as well as cobweb removal.",
+        "Ceiling and Wall Cleaning: Cleaning of ceilings and walls to remove dust, dirt, and cobwebs.",
+        "Window and Door Cleaning: Cleaning of all windows, window frames, and doors, including tracks and handles.",
+        "Kitchen Cleaning: Degreasing and cleaning of kitchen surfaces, cabinets (inside and out), countertops, and appliances (exterior only).",
+        "Bathroom Cleaning: Cleaning of all bathroom fixtures including sinks, toilets, showers, and bathtubs.",
+        "Furniture Cleaning: Dry vacuuming of sofas, chairs, and other upholstered furniture.",
+        "Appliance Cleaning: Exterior cleaning of major kitchen appliances like the fridge, microwave, and oven.",
+        "Lighting and Switchboard Cleaning: Cleaning of all light fixtures, fans, and switchboards.",
+        "Mattress and Carpet Cleaning: Dry vacuuming of mattresses and carpets to remove dust and allergens.",
+        "Rearranging Items: Basic rearrangement of furniture and items post-cleaning."
+      ],
+      excludes: [
+        "Wall Shampooing: Deep cleaning of walls with shampooing agents.",
+        "Heavy Stain Removal: Removal of stubborn stains, gum marks, sticker marks, lamination stickers, fevicol, paint marks, pigeon droppings, etc.",
+        "External Window Cleaning: Cleaning of windows that are beyond reachable areas or require special equipment.",
+        "Structural Repairs: Any kind of structural repairs, including plumbing, electrical repairs, and wall repairs.",
+        "Deep Mold Removal: Mold removal beyond standard cleaning efforts.",
+        "Balcony and Terrace Cleaning: Cleaning and scrubbing of balconies and terraces.",
+        "Interior Appliance Cleaning: Interior cleaning of appliances like ovens, microwaves, and fridges.",
+        "Furniture Repair and Reupholstery: Any repair or reupholstery of furniture items.",
+        "Specialty Stain Removal: Removal of deep-set stains that require specialized treatments.",
+        "Emergency Services: Services that require immediate attention without prior scheduling.",
+        "Pest Control: Any pest control services are not part of general deep cleaning and need to be availed separately."
+      ],
+      dos: [
+        "Secure Valuables: Ensure all valuable items are secured or removed from the areas to be cleaned before our team arrives.",
+        "Provide Access: Ensure our team has access to electricity and water supply during the cleaning process.",
+        "Communicate Special Requests: Inform us in advance of any specific areas of concern or additional services you may require.",
+        "Inspect Post-Cleaning: Check the cleaned areas post-service and provide feedback to the team.",
+        "Schedule Follow-Up: For any additional or recurring cleaning needs, schedule follow-up services in advance.",
+        "Prepare the Space: Remove any fragile or personal items from surfaces to be cleaned."
+      ],
+      donts: [
+        "Don't Leave Loose Items: Avoid leaving loose items or clutter in the areas to be cleaned.",
+        "Don't Interrupt the Process: Let the cleaning team complete their work without unnecessary interruptions.",
+        "Don't Apply Chemicals: Do not apply any chemicals or cleaning agents on areas that have been freshly cleaned.",
+        "Don't Leave Pets Unattended: Keep pets away from the areas being cleaned to ensure their safety and the efficiency of the cleaning process.",
+        "Don't Overcrowd the Space: Avoid overcrowding the cleaning area with unnecessary furniture or items.",
+        "Don't Delay Feedback: Provide immediate feedback if there are areas that need re-cleaning or attention."
+      ]
+    },
+    {
+      subcate: "General Pest Control Service",
+      includes: [
+        "Inspection: Thorough inspection of the premises to identify pest infestation areas.",
+        "Gel Application: Application of pest control gel in strategic locations like cabinets, wardrobes, window corners, and kitchen areas.",
+        "Spray Treatment: Spraying of pest control chemicals in bathrooms, bedrooms, kitchen cabinets, balconies, halls, and dining areas.",
+        "Protection from Common Pests: Treatment targeting common pests such as cockroaches, ants, flies, spiders, and silverfish.",
+        "Chemical Application: Use of government-approved chemicals like Fipronil, Imidacloprid, and Cypermethrin.",
+        "Egg and Larvae Elimination: Treatment aimed at killing adult pests as well as new eggs and larvae to provide lasting relief.",
+        "Service Duration: The average service time is 20 to 40 minutes, depending on the size of the house, with an additional 5 to 10 minutes for thorough inspection.",
+        "Safety Measures: Usage of safe and approved chemicals to ensure minimal risk to humans and pets."
+      ],
+      excludes: [
+        "Rodent Control: Specific treatments for rodents are not included in general pest control services.",
+        "Termite Treatment: Specialized termite treatment is not part of the general pest control package.",
+        "Bed Bug Treatment: Treatment specifically targeting bed bugs is not included.",
+        "Mosquito Control: Mosquito control treatments are not included.",
+        "Lizard Control: Lizard control measures are excluded from general pest control services.",
+        "Garden and Outdoor Areas: Pest control for extensive garden areas or large outdoor spaces is not included.",
+        "Structural Repairs: Repairs to structural damage caused by pests are not covered.",
+        "Sanitation Services: General sanitation and cleaning services post-treatment are not included.",
+        "Emergency Services: Immediate or emergency pest control services without prior scheduling are excluded.",
+        "Specialty Treatments: Treatments requiring specialized equipment or methods not covered under standard pest control.",
+        "Long-Term Maintenance: Long-term pest control maintenance plans are not included in a single service."
+      ],
+      dos: [
+        "Pre-Treatment Preparation: Ensure all food items are covered and stored away. Move furniture and appliances away from walls.",
+        "Inform the Technician: Inform the technician of any specific pest problems or areas of concern.",
+        "Follow Post-Treatment Instructions: Adhere to the post-treatment instructions provided by the technician for maximum effectiveness.",
+        "Schedule Follow-Up Visits: Schedule follow-up visits within the warranty period to address any recurring issues.",
+        "Maintain Cleanliness: Keep your home clean and free of food crumbs and spills to avoid attracting pests.",
+        "Use Preventative Measures: Seal cracks, fix leaks, and take other preventative measures to keep pests out."
+      ],
+      donts: [
+        "Don't Touch Treated Areas: Avoid touching treated areas until they are completely dry.",
+        "Don't Use Other Chemicals: Do not use other chemicals or cleaning agents on treated areas immediately after the service.",
+        "Don't Leave Children Unsupervised: Keep children away from treated areas for at least two hours after the service.",
+        "Don't Ignore Infestation Signs: If you notice signs of pest infestation after the treatment, contact us immediately for a follow-up visit.",
+        "Don't Delay Scheduling: Don’t delay scheduling follow-up visits if needed.",
+        "Don't Leave Food Exposed: Avoid leaving food exposed in the treated areas to prevent attracting pests."
+      ]
+    }
+  ];
+
   return (
     <div>
       <NabarCompo />
@@ -610,7 +701,6 @@ function Servicedetails() {
                   Do's
                 </button>
 
-                {console.log(serviceData, "serviceData===========")}
                 <button
                   onClick={() => handleDoes(1)}
                   className={`col-md-6 p-2 m-auto do-s ${doshow === 1 ? "dos-active" : ""
@@ -618,25 +708,26 @@ function Servicedetails() {
                 >
                   Dont's
                 </button>
-                {/* <div className="row p-3">
+                <div className="row p-3">
                   {doshow === 0 ? (
                     <ul className="p-2">
-                      {serviceData?.serviceIncludes?.map((Ele) => (
-                        <li key={Ele?.text} className="dos-list p-2">
-                          {Ele?.text}
-                        </li>
-                      ))}
+
+                      {services?.find((ele) => ele?.subcate?.toLowerCase()
+                        === subcategory?.toLowerCase())?.dos?.map((inc) => <li 
+                        className="dos-list p-2" key={inc} >
+                          {inc}
+                        </li>)}
                     </ul>
                   ) : (
                     <ul className="p-2">
-                      {serviceData?.serviceExcludes?.map((Ele) => (
-                        <li key={Ele?.text} className="dos-list p-2">
-                          {Ele?.text}
-                        </li>
-                      ))}
+                      {services?.find((ele) => ele?.subcate?.toLowerCase()
+                        === subcategory?.toLowerCase())?.donts?.map((inc) =>
+                          <li className="dos-list p-2" >
+                            {inc}
+                          </li>)}
                     </ul>
                   )}
-                </div> */}
+                </div>
               </div>
 
               <div className="row mt-5 cart_item_box cart_item_box1 text-center ">
