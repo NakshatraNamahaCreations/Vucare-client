@@ -501,8 +501,8 @@ export default function Layout() {
               />
             </div>
             <div className="row m-auto mt-5 commercial-bg p-3">
-              <h2 className="boldt">Commercial Serivces Management</h2>
-              <div className="row m-auto mt-3 commercial">
+              <h2 className="boldt m-auto">Commercial Serivces Management</h2>
+              <div className="row mt-3  commercial">
                 {commercial.map((ele) => (
                   <div className="col-md-2   mt-4 ">
                     <img

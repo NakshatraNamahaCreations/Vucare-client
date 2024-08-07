@@ -27,6 +27,7 @@ function Servicedetails() {
   const [serviceData, setserviceData] = useState([]);
   const [subModel, setsubModel] = useState(false);
   const [doshow, setdoshow] = useState(null);
+  const [includes, setincludes] = useState(null);
   // const [pricesdata, setpricesdata] = useState([]);
   const [Item, setItem] = useState([]);
   const [City, setCity] = useState(null);
@@ -64,6 +65,10 @@ function Servicedetails() {
   const handleDoes = (index) => {
     setdoshow(index);
   };
+
+  const handleIncludes = (index) => {
+    setincludes(index)
+  }
   const getAllServices = async () => {
     try {
       let res = await axios.get(`${ReactApi}/userapp/getservices`);
@@ -713,8 +718,8 @@ function Servicedetails() {
                     <ul className="p-2">
 
                       {services?.find((ele) => ele?.subcate?.toLowerCase()
-                        === subcategory?.toLowerCase())?.dos?.map((inc) => <li 
-                        className="dos-list p-2" key={inc} >
+                        === subcategory?.toLowerCase())?.dos?.map((inc) => <li
+                          className="dos-list p-2" key={inc} >
                           {inc}
                         </li>)}
                     </ul>
@@ -729,7 +734,43 @@ function Servicedetails() {
                   )}
                 </div>
               </div>
+              <div className="row ul_list p-4 mt-2">
+                <button
+                  onClick={() => handleIncludes(0)}
+                  className={`col-md-6 p-2 m-auto do-s ${includes === 0 ? "dos-active" : ""
+                    }`}
+                >
+                  Includes
+                </button>
 
+                <button
+                  onClick={() => handleIncludes(1)}
+                  className={`col-md-6 p-2 m-auto do-s ${includes === 1 ? "dos-active" : ""
+                    }`}
+                >
+                  Excludes
+                </button>
+                <div className="row p-3">
+                  {includes === 0 ? (
+                    <ul className="p-2">
+
+                      {services?.find((ele) => ele?.subcate?.toLowerCase()
+                        === subcategory?.toLowerCase())?.includes?.map((inc) => <li
+                          className="dos-list p-2" key={inc} >
+                          {inc}
+                        </li>)}
+                    </ul>
+                  ) : (
+                    <ul className="p-2">
+                      {services?.find((ele) => ele?.subcate?.toLowerCase()
+                        === subcategory?.toLowerCase())?.excludes?.map((inc) =>
+                          <li className="dos-list p-2" >
+                            {inc}
+                          </li>)}
+                    </ul>
+                  )}
+                </div>
+              </div>
               <div className="row mt-5 cart_item_box cart_item_box1 text-center ">
                 {!PriceId && (
                   <div>

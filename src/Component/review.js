@@ -5,44 +5,12 @@ import Slider from "react-slick";
 import StarIcon from "@mui/icons-material/Star";
 
 export default function Review() {
-  const settings = {
-    dots: true,
-    infinite: true,
-    speed: 900,
-    slidesToShow: 3,
-    slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 3000,
-    cssEase: "ease-in-out",
-  };
-  // const reviw = [
-  //   {
-  //     img: "../assests/prfil4.jfif",
-  //     review:
-  //       "Hi The Vu Care   team ws very good in work wise, hard working  made my home look neat n tidy   staff behaviour ws good and all the services  completed they were in time reached my place Bangarpet   I Recommend the vucare for the Vu Care thank u for the service",
-  //   },
-  //   {
-  //     img: "../assests/prfil2.jfif",
-  //     review:
-  //       "Hi The Vu Care   team ws very good in work wise, hard working  made my home look neat n tidy   staff behaviour ws good and all the services  completed they were in time reached my place Bangarpet   I Recommend the vucare for the Vu Care thank u for the service",
-  //   },
-  //   {
-  //     img: "../assests/prfil1.jfif",
-  //     review:
-  //       "Hi The Vu Care   team ws very good in work wise, hard working  made my home look neat n tidy   staff behaviour ws good and all the services  completed they were in time reached my place Bangarpet   I Recommend the vucare for the Vu Care thank u for the service",
-  //   },
-  //   {
-  //     img: "../assests/prfil4.jfif",
-  //     review:
-  //       "Hi The Vu Care   team ws very good in work wise, hard working  made my home look neat n tidy   staff behaviour ws good and all the services  completed they were in time reached my place Bangarpet   I Recommend the vucare for the Vu Care thank u for the service",
-  //   },
-  // ];
 
   return (
     <div className=" mt-5">
       <h2 className="text-center boldt">Review</h2>
 
-      <div className="row mt-3 slick-listsd1 ">
+      <div className="row mt-3 m-auto slick-listsd1 ">
         <iframe
           className="col-md-4 review"
           height="215"
