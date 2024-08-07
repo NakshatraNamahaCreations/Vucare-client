@@ -500,26 +500,26 @@ export default function Layout() {
                 style={{ width: "100%" }}
               />
             </div>
-            <div className="row m-auto mt-5 commercial-bg p-3">
-              <h2 className="boldt m-auto">Commercial Serivces Management</h2>
-              <div className="row mt-3  commercial">
-                {commercial.map((ele) => (
-                  <div className="col-md-2   mt-4 ">
-                    <img
-                      src={ele.img}
-                      width={150}
-                      height={150}
-                      className="p-2 border-name"
-                    />
+            <div className="row m-0 mt-5 commercial-bg p-3">
+              <h2 className="boldt row m-auto">Commercial Serivces Management</h2>
 
-                    <div className="row   fnt14  mt-2 text-center  boldt">
-                      <p className="col-md-10">{ele?.title}</p>
-                    </div>
-                  </div>
-                ))}
-              </div>
             </div>
+            <div className="row m-auto commercial commercial-bg">
+              {commercial.map((ele) => (
+                <div className="col-md-2   mt-4 ">
+                  <img
+                    src={ele.img}
+                    width={150}
+                    height={150}
+                    className="p-2 border-name"
+                  />
 
+                  <div className="row   fnt14  mt-2 text-center  boldt">
+                    <p className="col-md-10">{ele?.title}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
             <div className="row m-auto mt-5 ">
               <h2 className="boldt">Our Clients</h2>
 
