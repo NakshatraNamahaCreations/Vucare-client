@@ -513,7 +513,7 @@ export default function Layout() {
                     />
 
                     <div className="row   fnt14  mt-2 text-center  boldt">
-                      <p className="">{ele?.title}</p>
+                      <p className="col-md-10">{ele?.title}</p>
                     </div>
                   </div>
                 ))}
